@@ -1,0 +1,379 @@
+/* =======================
+   Light Theme Variables
+   ======================= */
+:root {
+  --primary-color: #83c5be;
+  --primary-dark: #006d77;
+  --accent-color: #e29578;
+  --accent-light: #ffddd2;
+  --text-color: #333;
+  --bg-color: #edf6f9;
+  --card-bg: #fff;
+  --navbar-bg: linear-gradient(135deg, #83c5be, #006d77);
+  --footer-bg: #83c5be;
+  --search-bg: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --hero-overlay: rgba(0, 0, 0, 0.5);
+  --goal-card-bg: #fff;
+  --goal-card-text: #666;
+  --popup-bg: #ffddd2;
+  --popup-text: #006d77;
+  --popup-button: #e29578;
+  --popup-button-text: #fff;
+  --reply-bg: #F9F6EE;
+  --form-input-border: #eee;
+  --form-link-hover: #e29578;
+}
+
+/* ========================
+   General Button Hover
+   ======================== */
+.btn, .btnn, .btn-animated, .viewProductBtn {
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  border-radius: 50px;
+  padding: 0.45rem 1.5rem;
+  background-color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  color: var(--popup-button-text);
+}
+
+.btn:hover,
+.btnn:hover,
+.btn-animated:hover,
+.viewProductBtn:hover {
+  background-color: #d17b64;
+  border-color: #d17b64;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(226, 149, 120, 0.35);
+}
+
+/* ========================
+   Product Card Hover
+   ======================== */
+.product-card {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 10px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px var(--shadow-color);
+  border-color: var(--primary-color);
+}
+
+.product-card .card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* ========================
+   Category Badge Hover
+   ======================== */
+.category-badge {
+  background-color: var(--accent-light);
+  color: var(--primary-dark);
+  transition: all 0.3s ease;
+}
+
+.category-badge:hover {
+  transform: scale(1.05);
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+
+
+/* ========================
+   Links and Icons
+   ======================== */
+a {
+  color: var(--primary-dark);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+/* ========================
+   Pagination Hover
+   ======================== */
+.pagination li a:hover:not(.active),
+.pagination li span:hover:not(.active) {
+  background-color: var(--accent-light);
+  color: var(--primary-dark);
+}
+
+
+.pending-card {
+  opacity: 0.6;
+  position: relative;
+  filter: grayscale(0.4);
+ 
+}
+
+
+.pending-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 193, 7, 0.9);
+  color: #000;
+  text-align: center;
+  padding: 6px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+  z-index: 2;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.pending-overlay {
+    filter: grayscale(80%) brightness(90%);
+    position: relative;
+}
+
+.pending-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e29578;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.modal-thumb {
+   height: 120px;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.modal-thumb:hover {
+    transform: scale(1.05);
+}
+
+
+        /* =======================
+   Custom Popup Overlay
+   ======================= */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+        /* =======================
+   Popup Card Box
+   ======================= */
+        .popup-card {
+            background-color: var(--popup-bg, #ffddd2);
+            color: var(--popup-text, #333);
+            padding: 30px;
+            max-width: 400px;
+            width: 90%;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Popup Title */
+        .popup-card h4 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: var(--primary-dark, #c0392b);
+            margin-bottom: 15px;
+        }
+
+        /* Popup Message */
+        .popup-card p {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: var(--popup-text, #333);
+        }
+
+        /* Button Container */
+        .popup-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* Prevent form from breaking layout */
+        .popup-buttons form {
+            margin: 0;
+            display: inline;
+        }
+
+        /* Base Button Style */
+        .okbutton {
+            padding: 10px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            min-width: 100px;
+            border: none;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Confirm Button */
+        .okbutton.confirm {
+            background-color: var(--popup-button, #e29578);
+            color: var(--popup-button-text, #fff);
+        }
+
+        .okbutton.confirm:hover {
+            background-color: var(--form-link-hover, #e07a5f);
+        }
+
+        /* Cancel Button */
+        .okbutton.cancel {
+            background-color: transparent;
+            color: var(--popup-text, #333);
+            border: 1px solid var(--popup-text, #333);
+        }
+
+        .okbutton.cancel:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        /* Responsive layout for small screens */
+        @media (max-width: 480px) {
+            .popup-buttons {
+                flex-direction: column;
+            }
+
+            .okbutton {
+                width: 100%;
+            }
+        }
+
+        .view-product-btn {
+    background-color: #ffe6f0 !important;
+    color: #8c1c3a; /* زهري غامق للنص */
+    border: 1px solid #f9c2d1;
+    padding: 6px 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.view-product-btn i {
+    margin-inline-end: 6px;
+    transition: transform 0.2s ease;
+}
+
+.view-product-btn:hover {
+    background-color: #fcd6e3 !important;
+    color: #72122b!important;
+    border-color: #f7a6be;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(240, 100, 130, 0.15);
+}
+
+.voucher-card {
+    border-radius: 15px;
+    background-color: #fff;
+    border-left: 10px dashed #ccc;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.voucher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.voucher-header {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.voucher-redeemed .voucher-header {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.voucher-expired .voucher-header {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.voucher-body {
+    padding: 1rem;
+    background-color: #fcfcfc;
+    flex-grow: 1;
+    transition: background-color 0.3s ease;
+}
+
+.voucher-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.voucher-code {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+.page-itempro .page-link {
+  color: var(--primary-dark);
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.page-itempro.active .page-link {
+  background-color: var(--accent-color);
+  color: #fff;
+  border-color: var(--accent-color);
+  font-weight: bold;
+}
+
+.page-itempro .page-link:hover {
+  background-color: var(--accent-light);
+  color: var(--primary-dark);
+}
+
+
+
+ 
