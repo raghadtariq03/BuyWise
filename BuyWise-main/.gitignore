@@ -1,0 +1,35 @@
+# Ignore AI model files
+AI/mymodel.pt
+AI/mymodel1h.pt
+
+# Ignore AI flask api model file (sometimes placed in this folder)
+AI/flask_ml_api_code/mymodel1h.pt
+
+# Virtual environment folders
+AI/flask_ml_api_code/venv/
+
+# Ignore environment variable files
+.env
+
+# Default ignored files and folders
+/shelf/
+/workspace.xml
+
+# HTTP Client requests for editors
+/httpRequests/
+
+# Datasource local storage
+/dataSources/
+/dataSources.local.xml
+
+# Logs
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE/editor config files
+.vscode/
+.idea/
